@@ -1,1 +1,4 @@
-﻿// Write your JavaScript code.
+﻿$(document).ready(function () {
+    $('#example').DataTable();
+    alert("hello");
+});
