@@ -1,42 +1,81 @@
-﻿
 @{
     ViewData["Title"] = "Home Page";
     Layout = "_Layout";
 }
 <head>
 
-</head>
-<body>
-    <div class="dataTable" style="padding:10px">
-        <table id="example" class="table table-striped table-bordered dt-responsive nowrap">
-            <thead>
-                <tr class="hover">
-                    <th>Project</th>
-                    <th>Manager</th>
-                    <th>Status</th>
-                    <th>Start Date</th>
-                    <th>Estimated End Date</th>
-                    <th>Tasks</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>2011/04/25</td>
-                    <td>2011/04/25</td>
-                    <td>shshhshsh</td>
-                </tr>
-                <tr>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>2011/07/25</td>
-                    <td>2011/07/25</td>
-                    <td>jssjjs</td>
-                </tr>
-            </tbody>
-        </table>
+
+<div class="dataTable" style="padding:10px">
+    <table id="example" class="dt-table table table-striped table-bordered dt-responsive" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button type="button"  data-toggle="modal" data-target="#projectInformation">Tiger Nixon </button></td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011/07/25</td>
+                <td>$170,750</td>
+            </tr>
+            <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>66</td>
+                <td>2009/01/12</td>
+                <td>$86,000</td>
+            </tr>
+            <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>2012/03/29</td>
+                <td>$433,060</td>
+            </tr>
+            <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>33</td>
+                <td>2008/11/28</td>
+                <td>$162,700</td>
+            </tr>
+    </table>
+</div>
+
+<!-- Description Modal -->
+<div class="modal fade" id="projectInformation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Drink Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <p id="description"></p>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
-</body>
+</div>
+

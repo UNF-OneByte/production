@@ -1,3 +1,10 @@
+
+﻿$(document).ready(function () {
+    $('#example').DataTable();
+});
+$('#projectInformation').on('shown.bs.modal', function () {
+    alert("hello");
+
 ﻿// Write your JavaScript code.
 $(document).ready(function () {
     $('#example').DataTable();
