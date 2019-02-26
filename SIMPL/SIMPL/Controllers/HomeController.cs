@@ -12,6 +12,7 @@ namespace SIMPL.Controllers
     {
         public IActionResult Index()
         {
+
             return View();
         }
 
