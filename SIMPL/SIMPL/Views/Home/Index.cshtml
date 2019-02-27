@@ -6,54 +6,45 @@
     <table id="example" class="dt-table table table-striped table-bordered dt-responsive" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Project Name</th>
+                <th>Project Manager</th>
+                <th>Start Date</th>
+                <th>Estimated End Date</th>
+                <th>Estimated cost</th>
+                <th>Status</th>
+                <th>Update</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><button type="button"  data-toggle="modal" data-target="#projectInformation">Tiger Nixon </button></td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
+                <td>Floor Replacements</td>
+                <td>Joe Budden</td>
+                <td>10/2/2018</td>
+                <td>12/2/2018</td>
                 <td>$320,800</td>
-            </tr>
+                <td>Planned</td>
+                <td><button type="button" data-toggle="modal" data-target="#projectInformation">Update</button></td>
+
+            </tr>      
             <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-            </tr>
+                <td>Light Bulb Installation</td>
+                <td>LeBron James</td>
+                <td>10/2/2017</td>
+                <td>12/2/2018</td>
+                <td>$320,800</td>
+                <td>Planned</td>
+                <td><button type="button" data-toggle="modal" data-target="#projectInformation">Update</button></td>
+
+            </tr>      
             <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-            </tr>
-            <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td>Edinburgh</td>
-                <td>22</td>
-                <td>2012/03/29</td>
-                <td>$433,060</td>
-            </tr>
-            <tr>
-                <td>Airi Satou</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>33</td>
-                <td>2008/11/28</td>
-                <td>$162,700</td>
+                <td>Back Yard Setup</td>
+                <td>Jack Daniels</td>
+                <td>10/2/2018</td>
+                <td>12/2/2019</td>
+                <td>$320,800</td>
+                <td>Planned</td>
+                <td><button type="button" data-toggle="modal" data-target="#projectInformation">Update</button></td>
+
             </tr>
     </table>
 </div>
@@ -63,13 +54,94 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Drink Details</h5>
+                <h5 class="modal-title">Project Information</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <p id="description"></p>
-            <div class="modal-footer">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="input1">Project Name</label>
+                        <input type="text" class="form-control" id="inputEmail4" >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Project Manager</label>
+                        <input type="text" class="form-control" id="inputPassword4" >
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Estimated Cost</label>
+                        <input type="text" class="form-control" id="inputPassword4" >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Funding</label>
+                        <input type="text" class="form-control" id="inputPassword4" >
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Estimated Labor Costs</label>
+                        <input type="text" class="form-control" id="inputPassword4" >
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Estimated Material Costs</label>
+                        <input type="text" class="form-control" id="inputPassword4" >
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Estimated Volunteer Costs</label>
+                        <input type="text" class="form-control" id="inputPassword4">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Capital Expenses: Budgeted</label>
+                        <input type="text" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Capital Expenses: Quoted</label>
+                        <input type="text" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Capital Expenses: Estimated</label>
+                        <input type="text" class="form-control" id="inputPassword4" >
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Operational Expenses: Budgeted</label>
+                        <input type="text" class="form-control" id="inputPassword4" >
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Operational Expenses: Quoted</label>
+                        <input type="text" class="form-control" id="inputPassword4" >
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Operational Expenses: Estimated</label>
+                        <input type="text" class="form-control" id="inputPassword4" >
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="inputPassword4">Start Date</label>
+                        <input type="date" class="form-control" id="inputPassword4" >
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputPassword4">Estimated End Date</label>
+                        <input type="date" class="form-control" id="inputPassword4">
+                    </div>                    
+                    <div class="form-group .col-4">
+                        <label for="inputPassword4">Project Description</label>
+                        <input type="text" class="form-control" id="inputPassword4">
+                    </div>
+                </div>
+
+            </form>
+            <div class="modal-footer row">
+                <button type="submit" class="btn btn-primary">Save Chanes</button>
+                <button type="button" class="btn btn-primary"><a href="">View Page Details</a></button>
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
             </div>
         </div>

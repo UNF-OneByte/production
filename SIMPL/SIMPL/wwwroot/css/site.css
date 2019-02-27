@@ -33,3 +33,10 @@
         display: none;
     }
 }
+.modal-content{
+    width: 850px;
+}
+.modal-title{
+    text-align:center;
+    font-size:larger;
+}
