@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+//using EFGetStarted.AspNetCore.ExistingDb.Models; https://docs.microsoft.com/en-us/ef/core/get-started/aspnetcore/existing-db#register-your-context-with-dependency-injection
+
 
 namespace SIMPL
 {
@@ -21,6 +24,7 @@ namespace SIMPL
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddMvc();
         }
 
