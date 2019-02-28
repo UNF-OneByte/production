@@ -33,3 +33,10 @@
         display: none;
     }
 }
+.modal-content{
+    width:900px;
+}
+#descriptionTextArea{
+    width:400px;
+    margin: 20px;
+}
