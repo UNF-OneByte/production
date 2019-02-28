@@ -8,6 +8,7 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <script type="text/javascript" src="~/ChartsJS/Chart.bundle.js"></script>
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -33,7 +34,7 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Projects</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">Tasks</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="reports">Reports</a></li>
                 </ul>
                 <p class="nav navbar-text navbar-right">Hello, @User.Identity.Name!</p>
             </div>
@@ -53,7 +54,7 @@
         <script src="~/js/site.js" asp-append-version="true"></script>
 
         <script type="text/javascript" src="~/DataTables/datatables.js"></script>
-
+        @*<script type="text/javascript" src="~/D3/d3.js"></script>*@       
 
     </environment>
     <environment exclude="Development">
@@ -69,7 +70,7 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>        
     </environment>
 
     @RenderSection("Scripts", required: false)
