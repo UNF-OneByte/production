@@ -14,6 +14,6 @@ namespace SIMPL.Models.View_Models
         string projectEstEndDate { get; set; }
         string projectEstCost { get; set; }
         string projectActCost { get; set; }
-        List<TaskModel> projectTaskList = new List<TaskModel>();
+        List<TaskModel> projectTaskList = new List<TaskModel>();      
     }
 }

@@ -15,8 +15,18 @@ namespace SIMPL.Controllers
 
             return View();
         }
+        public IActionResult CreateProject()
+        {
 
-        public IActionResult About()
+            return View();
+        }
+        public IActionResult ProjectsQueue()
+        {
+
+            return View();
+        }
+
+        public IActionResult Tasks()
         {
             ViewData["Message"] = "Your application description page.";
 
