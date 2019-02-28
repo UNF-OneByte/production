@@ -1,7 +1,109 @@
 ﻿@{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "Tasks";
+    Layout = "_Layout";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>DataTables example - Zero configuration</title>
+    <link rel="shortcut icon" type="image/png" href="/media/images/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
+    <link rel="stylesheet" type="text/css" href="/media/css/site-examples.css?_=19472395a2969da78c8a4c707e72123a">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <style type="text/css" class="init">
+    </style>
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <script type="text/javascript" src="/media/js/site.js?_=5e8f232afab336abc1a1b65046a73460"></script>
+    <script type="text/javascript" src="/media/js/dynamic.php?comments-page=examples%2Fbasic_init%2Fzero_configuration.html" async=""></script>
+    <script type="text/javascript" language="javascript" src="../resources/demo.js"></script>
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
 
-<p>Use this area to provide additional information.</p>
+    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+    <script type="text/javascript" class="init">
+
+
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+
+
+    </script>
+</head>
+<body class="wide comments example">
+    <a name="top" id="top"></a>
+    <div class="fw-background">
+        <div></div>
+    </div>
+    <div class="fw-container">
+
+
+        <div class="fw-body">
+            <div class="content">
+                <h1 class="page_title">SIMPL</h1>
+                <div id="example_wrapper" class="dataTables_wrapper">
+                    <div class="dataTables_length" id="example_length">
+
+                        <table id="example" class="display dataTable" style="width: 100%;" role="grid" aria-describedby="example_info">
+                            <thead>
+                                <tr role="row">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 131px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Name</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 211px;" aria-label="Position: activate to sort column ascending">Description</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 99px;" aria-label="Office: activate to sort column ascending">Created By</th>
+
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 41px;" aria-label="Age: activate to sort column ascending">Project Id</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 41px;" aria-label="Age: activate to sort column ascending">Vendor Id</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 41px;" aria-label="Age: activate to sort column ascending">Location</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 41px;" aria-label="Age: activate to sort column ascending">Cost Type</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Start date: activate to sort column ascending">Date Created</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 76px;" aria-label="Salary: activate to sort column ascending">Estimated Cost</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 76px;" aria-label="Salary: activate to sort column ascending">Actual Cost</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 76px;" aria-label="Salary: activate to sort column ascending">Estimated Hours</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 76px;" aria-label="Salary: activate to sort column ascending">Actual Hours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">Stucco Repair</td>
+                                    <td>Wall near reception office has hole in it</td>
+                                    <td>Jim Norton</td>
+                                    <td>Maintenance</td>
+                                    <td>Facilities</td>
+                                    <td>Reception</td>
+
+                                    <td>Unplanned</td>
+                                    <td>2008/11/28</td>
+                                    <td>$700</td>
+                                    <td>$70</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td class="sorting_1">Backyard Upkeep</td>
+                                    <td>Bushes overgrowing their plots</td>
+                                    <td>Marc Lando </td>
+                                    <td>Maintenance</td>
+                                    <td>Facilities</td>
+
+                                    <td>Backyard</td>
+                                    <td>Planned</td>
+                                    <td>2009/10/09</td>
+                                    <td>$500</td>
+                                    <td>$450</td>
+                                    <td>4</td>
+                                    <td>4</td>
+                                </tr>
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Description</th><th rowspan="1" colspan="1">Created By</th><th rowspan="1" colspan="1">Project Id</th><th rowspan="1" colspan="1">Vendor Id</th><th rowspan="1" colspan="1">Location</th><th rowspan="1" colspan="1">Cost Type</th><th rowspan="1" colspan="1">Date Created</th><th rowspan="1" colspan="1">Estimated Cost</th><th rowspan="1" colspan="1">Actual Cost</th><th rowspan="1" colspan="1">Estimated Hours</th><th rowspan="1" colspan="1">Actual Hours</th></tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
