@@ -8,14 +8,14 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <script type="text/javascript" src="~/ChartsJS/Chart.bundle.js"></script>
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        <link rel="stylesheet" type="text/css" href="~/Datatables/datatables.css" />
-
+        <link rel="stylesheet" type="text/css" href="~/DataTables/datatables.css" />
     </environment>
 </head>
 <body>
@@ -27,33 +27,42 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">SIMPL</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="ProjectsQueue">Projects</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="CreateProject">Request Project</a></li>
+
+                    <li><a asp-area="" asp-controller="Home" asp-action="Tasks">Tasks</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="reports">Reports</a></li>
+
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Adminitrator</a></li>
                 </ul>
                 <p class="nav navbar-text navbar-right">Hello, @User.Identity.Name!</p>
             </div>
         </div>
     </nav>
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - SIMPL</p>
-        </footer>
-    </div>
 
+
+    </div>
+    <footer>
+        <hr />
+        <p>&copy; 2019 - SIMPL</p>
+    </footer>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
-        <script type="text/javascript" src="~/Datatables/datatables.js"></script>
 
+        <script type="text/javascript" src="~/DataTables/datatables.js"></script>
+        @*<script type="text/javascript" src="~/D3/d3.js"></script>*@
 
     </environment>
     <environment exclude="Development">
@@ -73,5 +82,7 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
+
+
 </body>
 </html>
