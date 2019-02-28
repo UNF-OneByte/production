@@ -46,21 +46,23 @@
             </div>
         </div>
     </nav>
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - SIMPL</p>
-        </footer>
-    </div>
 
+
+    </div>
+    <footer>
+        <hr />
+        <p>&copy; 2019 - SIMPL</p>
+    </footer>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
 
         <script type="text/javascript" src="~/DataTables/datatables.js"></script>
-        @*<script type="text/javascript" src="~/D3/d3.js"></script>*@       
+        @*<script type="text/javascript" src="~/D3/d3.js"></script>*@
 
     </environment>
     <environment exclude="Development">
@@ -76,9 +78,11 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>        
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)
+
+
 </body>
 </html>
