@@ -26,7 +26,7 @@ namespace SIMPL.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Tasks()
         {
             ViewData["Message"] = "Your application description page.";
 
