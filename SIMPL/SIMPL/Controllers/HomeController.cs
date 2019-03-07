@@ -15,7 +15,7 @@ namespace SIMPL.Controllers
 
             return View();
         }
-        public IActionResult CreateProject()
+        public IActionResult CreateProjects()
         {
 
             return View();
