@@ -9,6 +9,104 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <script type="text/javascript" src="~/ChartsJS/Chart.bundle.js"></script>
+
+        @*start*@
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <title>DataTables example - Zero configuration</title>
+        <link rel="shortcut icon" type="image/png" href="/media/images/favicon.png">
+        <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
+        <link rel="stylesheet" type="text/css" href="/media/css/site-examples.css?_=19472395a2969da78c8a4c707e72123a">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+        <style type="text/css" class="init">
+        </style>
+        <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+        <script type="text/javascript" src="/media/js/site.js?_=5e8f232afab336abc1a1b65046a73460"></script>
+        <script type="text/javascript" src="/media/js/dynamic.php?comments-page=examples%2Fbasic_init%2Fzero_configuration.html" async=""></script>
+        <script type="text/javascript" language="javascript" src="../resources/demo.js"></script>
+        <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+
+
+        <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+        <script type="text/javascript" class="init">
+
+            $(document).ready(function () {
+                $('#home').DataTable({
+                    dom: 'Bfrtip',                    
+                    buttons: [                        
+                        {
+                            extend: 'csv',
+                            title: 'My Projects ' + today
+                        },
+                        {
+                            extend: 'print',
+                            title: 'My Projects- ' + today
+                        }
+                    ]                    
+                });
+
+                $('#reports').DataTable({
+                    dom: 'Bfrtip',
+                    buttons: [
+                        {
+                            extend: 'csv',
+                            title: 'Tasks By Budget- ' + today
+                        },
+                        {
+                            extend: 'print',
+                            title: 'Tasks By Budge- ' + today
+                        }
+                    ]
+                });
+
+                $('#projects').DataTable({
+
+                });
+
+                $('#tasks').DataTable({
+
+                });
+            });
+
+            //Gets todays date
+            var today = new Date();
+            var dd = today.getDate();
+
+            var mm = today.getMonth() + 1;
+            var yyyy = today.getFullYear();
+            if (dd < 10) {
+                dd = '0' + dd;
+            }
+
+            if (mm < 10) {
+                mm = '0' + mm;
+            }
+            today = mm + '-' + dd + '-' + yyyy;
+            console.log(today);
+
+           //Get live time
+            function startTime() {
+                var tday = new Date();
+                var h = tday.getHours();
+                var m = tday.getMinutes();
+                var s = tday.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('time').innerHTML =
+                    h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+                document.getElementById('date').innerHTML = today
+            }
+            function checkTime(i) {
+                if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+                return i;
+            }
+
+        </script>
+        @*end*@
+
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -18,7 +116,7 @@
         <link rel="stylesheet" type="text/css" href="~/DataTables/datatables.css" />
     </environment>
 </head>
-<body>
+<body onload="startTime()">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -35,32 +133,34 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="ProjectsQueue">Projects</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="CreateProject">Request Project</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="CreateProjects">Request Project</a></li>
 
                     <li><a asp-area="" asp-controller="Home" asp-action="Tasks">Tasks</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="reports">Reports</a></li>
-
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Adminitrator</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Adminstrator</a></li>
                 </ul>
                 <p class="nav navbar-text navbar-right">Hello, @User.Identity.Name!</p>
+                <p class="nav navbar-text navbar-right" id="time"></p>
+                <p class="nav navbar-text navbar-right" id="date"></p>
             </div>
         </div>
     </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - SIMPL</p>
-        </footer>
-    </div>
 
+    <div class="container body-content">     
+        @RenderBody()
+
+    </div>
+    <footer>
+        <hr />
+        <p>&copy; 2019 - SIMPL</p>
+    </footer>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
 
         <script type="text/javascript" src="~/DataTables/datatables.js"></script>
-        @*<script type="text/javascript" src="~/D3/d3.js"></script>*@       
+        @*<script type="text/javascript" src="~/D3/d3.js"></script>*@
 
     </environment>
     <environment exclude="Development">
@@ -76,9 +176,11 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>        
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)
+
+
 </body>
 </html>
