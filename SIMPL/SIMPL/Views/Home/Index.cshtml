@@ -3,11 +3,77 @@
     ViewData["Title"] = "Home Page";
     Layout = "_Layout";
 }
-<head>
 
-</head>
-<body>
-    <img src="~/images/5starlogo.png" alt="Smiley face" height="400" width="900" style="padding:100px">
+<!--<body>-->
+    <div class="row">
+        <div class="col-lg-7">
+            <img src="~/images/5starlogo.png" alt="Smiley face" height="350" width="800" style="padding:100px">
+        </div>
+        <br />
+        <div class="col-md-4" id="info">
+            <div class="thumbnail">
+                <h4><strong>My Projects:</strong></h4>
+                <hr />
+                <h5>Total projects opened: <strong>3</strong> </h5>
+                <hr />
+            </div>
+        </div>
 
-</body>
+        <div class="col-md-4">
+            <div class="thumbnail" id="info">
+                <h4><strong>My Tasks:</strong></h4>
+                <hr />
+                <h5>Total tasks opened: <strong>4</strong> </h5>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @*start*@
+        <div class="col-sm-11">
+            <div class="thumbnail">
+                <h2><strong>My Projects:</strong></h2>
+                <hr />
+                @*start*@
+                <div id="example_wrapper" class="dataTables_wrapper">
+                    <table id="home" class="display dataTable" role="grid">
+                        <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Project ID activate to sort column descending">Project ID</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Project Name: activate to sort column ascending">Project Name</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Start Date: activate to sort column ascending">Start Date</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Location: activate to sort column ascending">Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">1</td>
+                                <td>Patch North Roof</td>
+                                <td>02/18/2019</td>
+                                <td>Roof</td>
+                            </tr>
+                            <tr role="row" class="even">
+                                <td class="sorting_1">2</td>
+                                <td>Toilet Clogged</td>
+                                <td>02/28/2019</td>
+                                <td>West Wing</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td class="sorting_1">4</td>
+                                <td>Light bulb replacement</td>
+                                <td>02/12/2019</td>
+                                <td>Room 2003</td>
+                            </tr>                          
+                        </tbody>
+                    </table>
+                </div>
+                @*end*@
+            </div>
+        </div>
+    </div>
+        @*end*@
+    </div>
+    
+
+<!--</body>-->
 
