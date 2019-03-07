@@ -3,14 +3,10 @@
     Layout = "_Layout";
 }
 
-<head>
-
-</head>
-
-<body>
     <h1 class="page_title">Create Project</h1>
-    <form>
-        <div class="form-row">
+    <hr />
+    <form class="row">
+        <div class="row">
             <div class="form-group col-md-6">
                 <label for="input1">Project Name</label>
                 <input type="text" class="form-control" id="inputEmail4">
@@ -20,7 +16,7 @@
                 <input type="text" class="form-control" id="inputPassword4">
             </div>
         </div>
-        <div class="form-row">
+        <div class="row">
             <div class="form-group col-md-6">
                 <label for="inputPassword4">Estimated Cost</label>
                 <input type="text" class="form-control" id="inputPassword4">
@@ -30,7 +26,7 @@
                 <input type="text" class="form-control" id="inputPassword4">
             </div>
         </div>
-        <div class="form-row">
+        <div class="row">
             <div class="form-group col-md-4">
                 <label for="inputPassword4">Estimated Labor Costs</label>
                 <input type="text" class="form-control" id="inputPassword4">
@@ -44,7 +40,7 @@
                 <input type="text" class="form-control" id="inputPassword4">
             </div>
         </div>
-        <div class="form-row">
+        <div class="row">
             <div class="form-group col-md-4">
                 <label for="inputPassword4">Capital Expenses: Budgeted</label>
                 <input type="text" class="form-control" id="inputPassword4">
@@ -58,7 +54,7 @@
                 <input type="text" class="form-control" id="inputPassword4">
             </div>
         </div>
-        <div class="form-row">
+        <div class="row">
             <div class="form-group col-md-4">
                 <label for="inputPassword4">Operational Expenses: Budgeted</label>
                 <input type="text" class="form-control" id="inputPassword4">
@@ -73,25 +69,23 @@
             </div>
         </div>
 
-        <div class="form-row">
+        <div class="row">
             <div class="form-group col-md-2">
                 <label for="inputPassword4">Start Date</label>
-                <input type="date" class="form-control" id="inputPassword4">
+                <input type="date" class="form-control" id="startDate" onload="getDate()">
             </div>
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-2">
                 <label for="inputPassword4">Estimated End Date</label>
                 <input type="date" class="form-control" id="inputPassword4">
             </div>
         </div>
-        <div class="form-row">
-            <div class="form-group col-lg-8">
+        <div class="row">
+            <div class="col-lg-8">
                 <label for="inputPassword4">Project Description</label>
                 <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="5" style="margin:20px"></textarea>
             </div>
         </div>        
-        <div class="form-row">
+        <div class="row">
             <button type="submit" class="btn btn-primary">Save Changes</button>
         </div>
-
     </form>
-</body>
