@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewData["Title"] = "Create Tasks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <h1 class="page_title">Create Tasks</h1>
+    <div class="container">
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="input1">Task Name</label>
+                    <input type="text" class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Vendor</label>
+                    <input type="text" class="form-control" id="inputPassword4">
+                </div>
+            </div>
+            <div class="form-row">
+                @* This div needs to take from the windows Authentication*@
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Created By</label>
+                    <input type="text" class="form-control" id="inputPassword4">
+                </div>
+                @* This div needs to take from the link to the project*@
+                <div class="form-group col-md-6" style="display:none">
+                    <label for="inputPassword4">ProjectId</label>
+                    <input type="text" class="form-control" id="inputPassword4">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Location</label>
+                    <input type="text" class="form-control" id="inputPassword4">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Date</label>
+                    <input type="date" class="form-control" id="inputPassword4">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Estimated Cost</label>
+                    <input type="text" class="form-control" id="inputPassword4">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Actual Cost</label>
+                    <input type="text" class="form-control" id="inputPassword4">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Completed By</label>
+                    <input type="text" class="form-control" id="inputPassword4">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Estimated Hours</label>
+                    <input type="text" class="form-control" id="inputPassword4">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Actual Hours</label>
+                    <input type="text" class="form-control" id="inputPassword4">
+                </div>
+                
+
+            </div>
+            
+
+            <div class="form-row">
+                
+                <div class="form-group" align="center">
+                    
+                    <label for="TaskDescription">Task Description</label>
+                    <textarea class="form-control rounded-0" id="TaskDescription" rows="5" style="margin:20px"></textarea>
+                </div>
+            </div>
+
+                <div class="form-group col-md-8">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+
+        </form>
+    </div>
+</body>
