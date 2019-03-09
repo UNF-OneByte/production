@@ -7,6 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using SIMPL;
+using SIMPL.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using SIMPL.Areas.Identity;
 //using EFGetStarted.AspNetCore.ExistingDb.Models; https://docs.microsoft.com/en-us/ef/core/get-started/aspnetcore/existing-db#register-your-context-with-dependency-injection
 
 
@@ -24,7 +30,13 @@ namespace SIMPL
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+
+            services.AddDbContext<Models.project_trackerContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("csConnection")));
+            services.AddDefaultIdentity<IdentityUser>().AddRoles<IdentityRole>()
+                 .AddEntityFrameworkStores<Models.project_trackerContext>();
+
             services.AddMvc();
         }
 

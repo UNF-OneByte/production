@@ -5,7 +5,7 @@ using Microsoft.IdentityModel;
 
 namespace SIMPL.Models
 {
-    public class project_trackerContext : DbContext //used to say public partial class
+    public class project_trackerContext : DbContext //previously said public partial class
     {
         public virtual DbSet<AspNetRoleClaims> AspNetRoleClaims { get; set; }
         public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }

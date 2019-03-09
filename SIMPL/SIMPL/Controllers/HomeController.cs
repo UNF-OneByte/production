@@ -8,6 +8,21 @@ using SIMPL.Models;
 
 namespace SIMPL.Controllers
 {
+    public class AccountController : Controller
+    {
+        public IActionResult Login()
+        {
+            return View("Areas/Identity/Pages/Account/Login.cshtml");
+        }
+
+        public IActionResult Forbidden()
+        {
+            return View();
+        }
+    }
+
+
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()
