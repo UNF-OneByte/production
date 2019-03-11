@@ -40,3 +40,9 @@
     width:400px;
     margin: 20px;
 }
+.form-spacing{
+    padding-top:10px !important;
+}
+.form-align{
+    margin-right:15px !important;
+}
