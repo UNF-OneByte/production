@@ -3,8 +3,9 @@
     $('#example').DataTable();
 });
 $('#projectInformation').on('shown.bs.modal', function () {
-    alert("hello");
-
+});
+$('#taskDetails').on('shown.bs.modal', function () {
+});
 ﻿// Write your JavaScript code.
 $(document).ready(function () {
     $('#example').DataTable();

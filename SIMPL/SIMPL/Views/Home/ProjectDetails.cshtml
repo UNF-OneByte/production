@@ -3,7 +3,7 @@
     Layout = "_Layout";
 }
 <body>
-    <h1 class="page_title">Create Project</h1>
+    <h1 class="page_title">Project Details</h1>
     <div class="container">
         <form class="form-horizontal">
             <div class="form-row">
@@ -109,71 +109,89 @@
         </form>
     </div>
 
-    <div class="fw-container">
-        <div class="fw-body">
-            <div class="content">
-                <h2 class="page_title">Project Tasks</h2>
-                <hr />
-                <div id="example_wrapper" class="dataTables_wrapper">
-                    <div class="dataTables_length" id="example_length">
+    <div class="container">
+        <div class="content">
+            <h2 class="page_title">Project Tasks</h2>
+            <hr />
+            <div id="example_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_length" id="example_length">
 
-                        <table id="tasks" class="display dataTable" style="width: 100%;" role="grid" aria-describedby="example_info">
-                            <thead>
-                                <tr role="row">
-                                    <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 131px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Name</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 211px;" aria-label="Position: activate to sort column ascending">Description</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 99px;" aria-label="Office: activate to sort column ascending">Created By</th>
-
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 41px;" aria-label="Age: activate to sort column ascending">Project Id</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 41px;" aria-label="Age: activate to sort column ascending">Vendor Id</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 41px;" aria-label="Age: activate to sort column ascending">Location</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 41px;" aria-label="Age: activate to sort column ascending">Cost Type</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Start date: activate to sort column ascending">Date Created</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 76px;" aria-label="Salary: activate to sort column ascending">Estimated Cost</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 76px;" aria-label="Salary: activate to sort column ascending">Actual Cost</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 76px;" aria-label="Salary: activate to sort column ascending">Estimated Hours</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 76px;" aria-label="Salary: activate to sort column ascending">Actual Hours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr role="row" class="odd">
-                                    <td class="sorting_1">Stucco Repair</td>
-                                    <td>Wall near reception office has hole in it</td>
-                                    <td>Jim Norton</td>
-                                    <td>Maintenance</td>
-                                    <td>Facilities</td>
-                                    <td>Reception</td>
-
-                                    <td>Unplanned</td>
-                                    <td>2008/11/28</td>
-                                    <td>$700</td>
-                                    <td>$70</td>
-                                    <td>2</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr role="row" class="even">
-                                    <td class="sorting_1">Backyard Upkeep</td>
-                                    <td>Bushes overgrowing their plots</td>
-                                    <td>Marc Lando </td>
-                                    <td>Maintenance</td>
-                                    <td>Facilities</td>
-
-                                    <td>Backyard</td>
-                                    <td>Planned</td>
-                                    <td>2009/10/09</td>
-                                    <td>$500</td>
-                                    <td>$450</td>
-                                    <td>4</td>
-                                    <td>4</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
+                    <table id="tasks" class="display dataTable" style="width: 100%;" role="grid" aria-describedby="example_info">
+                        <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 131px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Name</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 100px;" aria-label="Office: activate to sort column ascending">Created By</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 80px;" aria-label="Age: activate to sort column ascending">Location</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 85px;" aria-label="Start date: activate to sort column ascending">Date Created</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 110px;" aria-label="Salary: activate to sort column ascending">Estimated Cost</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Salary: activate to sort column ascending">Actual Cost</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 110px;" aria-label="Salary: activate to sort column ascending">Estimated Hours</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 90px;" aria-label="Salary: activate to sort column ascending">Actual Hours</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr role="row" class="odd">
+                                <td><a href="" data-toggle="modal" data-target="#taskDetails" />Stucco Repair</td>
+                                <td>Jim Norton</td>
+                                <td>Reception</td>
+                                <td>6/12/2019</td>
+                                <td>$700</td>
+                                <td>$700</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Task Description Modal -->
+    <div class="modal fade" id="taskDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Task Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="input1">Project Descrption</label> 
+                            <input type="text" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Project Manager</label>
+                            <input type="text" class="form-control" id="inputPassword4">
+                        </div>
+                    </div>                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="input1">Project Descrption</label> 
+                            <input type="text" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Project Manager</label>
+                            <input type="text" class="form-control" id="inputPassword4">
+                        </div>
+                    </div>                   
+                    <div class="form-row">
+                        <label class="control-label col-sm-4 form-spacing">Project Description:</label>
+                        <div class="col-sm-8 form-spacing">
+                            <textarea readonly class="form-control rounded-0" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
+    </div>
+
 </body>
 <script>
     var ctx = document.getElementById("myChart").getContext('2d');
